@@ -1,0 +1,268 @@
+@charset "UTF-8";
+/*importando a fonte*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@font-face{ 
+    font-family:"FonteLogo";
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:#dddddd;/*<!--#a1d3ef;#000000(quantidade de verde, vermelho e azul //  rgb(35, 137,195);-->*/
+    color:rgba(0,0,0,1);/* <!--muda a cor da letra, com rgba, o último ponto é a transparência, fonte preta e tranparente-->*/
+}
+
+div#interface{
+    width: 900px;
+    background-color: #ffffff;
+    margin:-20px auto 10px auto; /*ordem da margem: superior  direita baixo esquerda, no auto o navegador organiza*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5) ; /*deslocamento lateral/ vertical /espalhamento da sombra/cor da sombra*/
+    padding: 10px 10px 10px 10px;
+}
+
+p{
+    text-align:justify;
+    text-indent:50px;
+}
+a{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone{
+    position:absolute;
+    left: 780px;
+    top:70px ;
+}
+
+header#cabecalho{
+    border-bottom: 1px #606060 solid ;
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;/*colocando a imagem colocada via url deslocamento lateral e vertical*/
+
+
+}
+header#cabecalho h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color:#606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family:'Titillium Web', sans-serif;
+    font-size: 15pt;
+    color:#888888;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+/*Formatação de imagens com legendas */
+
+figure.foto-legenda{
+    position: relative; /*para a legenda não sair do box*/
+    border:8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{
+    width: 100%;
+    height: 100%;
+
+}
+
+figure.foto-legenda figcaption{
+    opacity:0;/*Deixa a legenda sem aparecer, só aparecerá quando passar o mouse por cima*/
+    position: absolute;
+    top:0px;
+    background-color:rgba(0,0,0,.4);
+    color:white;
+    width:100%;
+    height:100%;
+    padding:10px;
+    box-sizing: border-box;
+    transition: opacitty 1s; /*o tempo que vai levar para legenda aparecer*/
+}
+
+figure.foto-legenda:hover figcaption{
+    opacity:1;
+
+}
+
+/* Formatação do menu */
+
+nav#menu{
+    display:block;/*usamos bloco porque ele pode flutuar pela tela*/
+  
+}
+
+nav#menu ul{
+    list-style:none; /*ficará sem os marcadores*/
+    text-transform: uppercase; /*as letrad do menu ficarão maiúsculas*/
+    position: absolute; /*vai indicar que os botões do menu ficarão livres para flutuar na tela do site, se colocasse relativa eu só poderia fazer a flutuação dentro do container nav*/
+    top:-20px;
+    left:500px;
+}
+
+nav#menu li{
+    display: inline-block; /*Faz com que um bloco seja exibido numa mesma linha*/
+    background-color: #dddddd;
+    padding: 10px; /*indica o espaço entre o botão e o texto que fica dentro dele,espaço interno*/
+    margin: 2px; /*indica o espaço entre os botões, espaço externo*/
+    transition: background-color 1s;/* vai levar um segundo para mudar de uma cor para outra*/
+
+}
+
+nav#menu li:hover{/*o hover será o efeito que temos ao passar o mouse por cima*/
+    background-color:#606060;
+
+} 
+
+nav#menu h1{
+    display:none; /*vai sumir no site, mas no código continua para termos a ideia da organização*/
+}
+
+nav#menu a{
+    color:#000000;
+    text-decoration: none; /*retirar o sublinhado do link*/
+}
+
+nav#menu a:hover{ /*acões que acontecerão ao passar o mouse por cima*/
+    color:#ffffff;
+    text-decoration: underline;
+}
+
+/*FORMATANDO AS NOVAS TAGS SECTION / ASIDE E FOOTER*/
+section#corpo{
+    display: block;
+    width: 500px; /*largura*/
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+/*FORMATANDO A PARTE DA NOTÍCIA PRINCIPAL DENTRO DO ARTICLE*/
+
+article#noticia-principal h2{
+    font-size: 13pt;
+    color:#606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin:10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color:#606060;
+    margin-bottom: 0px;;/*diminuir o tamanho entre o conteúdo de h1 e do contúdo de h2*/
+    margin-top: 0px;
+}
+
+.direita{
+    text-align: right;
+
+}
+
+header#cabecalho-artigo h2{
+    font-size: 13pt;
+    color:#cecece;
+    background-color: #ffffff;
+    margin:0px;
+    
+}
+
+header#cabecalho-artigo h3{
+    font-size: 12pt;
+    color: #606060; 
+}
+
+table#tabelaspec{
+    border: 1px solid #606060;/* espessura tipo cor*/
+    border-spacing: 0px; /* é o que vai retirar o espaço entre as células*/
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+table#tabelaspec td{
+    border: 1px solid #606060;
+    padding:10px;
+    text-align:center;
+    vertical-align: middle;
+
+}
+
+table#tabelaspec td.ce{
+    color:#ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+
+}
+
+table#tabelaspec td.cd{
+    background-color: #cecece;
+
+}
+
+table#tabelaspec caption{
+    color:#888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+
+table#tabelaspec caption span{
+    display: block;
+    float:right;
+    color:#000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+aside#lateral{
+    display: block;
+    width: 350px;
+    float:right;
+    background-color: #dddddd;
+    padding:10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);/*0,0,0 é tudo preto*/
+}
+
+aside#lateral h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+
+
+
+}
+
+aside#lateral h2{
+    background-color: #606060;
+    font-size: 13pt;
+    color:#ffffff;
+    padding: 5px;
+
+
+}
+
+
+
+footer#rodape{
+    clear:both;
+    border-top: 1px solid #606060 ;
+}
+
+footer#rodape p{
+    text-align: center;
+}

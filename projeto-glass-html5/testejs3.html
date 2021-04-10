@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JavaScript</title>
+    <script>  /*Tag que indica que estamos trabalhando com javascript*/
+        function acendeLampada() {
+            document.getElementById("luz").src= "_imagens/lampada-acesa.jpg"; /*pegando o elemento pelo id, qunado apssar o mouse por cima vai sair de lampada apagada para acesa*/
+           
+        }
+
+        function apagaLampada(){
+            document.getElementById("luz").src= "_imagens/lampada-apagada.jpg";
+        }
+
+        function quebraLampada(){
+            document.getElementById("luz").src= "_imagens/lampada-quebrada.jpg";
+        }
+    
+    </script>
+</head>
+
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id = "luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()"/> <!--com o onclick, ao clicar na lâmpada teremos a chamada da funcção em JS, -->
+   
+
+</body>
+</html>

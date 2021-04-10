@@ -1,0 +1,44 @@
+DNS- IDENTIFICAÇÃO DE MÁQUINAS NA REDE
+ftp- transmissão de arquivos
+http- protocolo de tranferencia de hipertexto(texto, imagem, som, qlq conteudo multimidia)
+html-linguagem de conteúdo de hipertexto
+
+html-- semântica, tem significado
+css- estilo
+JsS- interatividade
+
+datagrama
+modulação/demodulação MODEM
+
+servidores dns- pega o domínio, p.ex br, é direcionado 
+
+ao dns que contém sites terminados em br, nele tem uma tabela onde cada site possui o seu endereço de servidor
+
+www.google.com>> domínio
+TOOLS>> COMON PALETE
+
+<wbr/> quebra de palavra, indica que a palvra pod ser separada, numa separação de sílavbas
+o wbr não inclui hifen
+
+$shy acrescenta hífen muito usado para separar palavras
+
+colocar síbolos especiais como porcentagem
+
+&lt;menor que
+&gt; maior que
+&le;
+&ge;
+
+&pound;
+&yen;
+&euro;
+
+&copy
+&reg;
+&trade;
+&sum
+ <em> enfase
+<del> corta a palavras
+<span> formata pequenos testos
+
+ background-image: url("fundo.jpg");
