@@ -7,18 +7,19 @@
     <style></style>
     <!--Se quissessemos colocar o estilo direto no html, mas isso é inviável, então separamos em outro arquivo-->
     <link rel="stylesheet" type="text/css" href="_css/estilo.css">
-
+    <link rel="stylesheet" href="_css/specs.css"/>
 </head>
 
-<script language = "javascript" src="_javascript/funcoes.js">
-  
+<script language="javascript" src="_javascript/funcoes.js">
+
 </script>
 
 
 <body>
     <div id="interface">
         <!--usada para delimitar a interface que estará em posição relativa(dentro desse container), exceto pelo menu que estará em asuluta-->
-        <header id="cabecalho"> <!--Tudo que está dentro header refere-se ao menu principal-->
+        <header id="cabecalho">
+            <!--Tudo que está dentro header refere-se ao menu principal-->
 
             <hgroup>
                 <!--AGRUPANDO TÍTULOS QUE FAZEM PARTE DE UM MESMO ASSUNTO-->
@@ -34,12 +35,20 @@
                 <!--criando menu flutuante-->
                 <ul>
                     <!--três tipos de listas ordenadas, se fosse ul no lugar dos números ou letras apareceria marcadores-->
-                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('_imagens/home.png')"
+                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
                     <!--não usamos o target pq como o menu é interno ao site não é necessário o target-->
-                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
-                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
-                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
-                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
+                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')"
+                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')"
+                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a>
+                    </li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')"
+                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale
+                            conosco</a></li>
 
                 </ul>
 
@@ -47,22 +56,44 @@
             </nav>
         </header>
 
-Glass > Especificações
-Raio-X no Google Glass
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+        <section id="corpo-full">
+            <article id="noticia-principal">
+                <!--separa partes importantes no texto, uma section pode ter vários article-->
+                <header id=cabecalho-artigo>
+                    <!--podemos ter cabeçalho para qlq parte do código-->
+                    <hgroup>
+                        <h3> Glass > Especificações</h3> <!-- no break space traz espaço em branco  -->
+                        <h1>Raio-X no Google Glass</h1>
+                        <h2>por Gustavo Guanabara</h2>
+                        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
 
-Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+                <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google
+                    Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.
+                </p>
+                <section>
+                    <img src ="_imagens/glass-esquema-marcado.jpg" usemap="#meumapa"/> <!--usemap é a referência par ao uso do mapa-->
+                    <map name="meumapa">
+                        <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" target="janela"/><!--href, qual arquivo será aberto quando clicar com o mouse, vai abrir o google-glass em quem term #tela como referência-->
+                        <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela"/>     
+                        <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela"/>    
+                        <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela"/>                                                                               <!--target é o alvo, exatamente onde o arquivo será aberto-->
+                    </map>
+                    <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe> <!--Trazer um conteúdo que está sendo utilizado em outros documentos-->
 
-[AQUI ENTRA UMA IMAGEM]
+                </section>
+                [AQUI ENTRA UMA IMAGEM]
+            </article>
+        </section>
 
-<footer id="rodape">
-    <p>Copyright 2013 - by Gustavo Guanabara <br />
-        <a href="http://facebook.com/cursoemvideo" target="_blank"> Facebook</a> |
-        <a href="http://twitter.com.br/cursoemvideo" target="_blank">Twitter</a>
-    </p>
-</footer>
-</div>
+        <footer id="rodape">
+            <p>Copyright 2013 - by Gustavo Guanabara <br />
+                <a href="http://facebook.com/cursoemvideo" target="_blank"> Facebook</a> |
+                <a href="http://twitter.com.br/cursoemvideo" target="_blank">Twitter</a>
+            </p>
+        </footer>
+    </div>
 </body>
 
 </html>
